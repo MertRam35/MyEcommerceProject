@@ -17,8 +17,8 @@ public class DataGenerator {
         Customer customer2 = new Customer(UUID.randomUUID(), "Mert2", "mert@mert");
 
 
-
-
+        StaticConstants.CUSTOMER_LIST.add(customer1);
+        StaticConstants.CUSTOMER_LIST.add(customer2);
     }
 
 
