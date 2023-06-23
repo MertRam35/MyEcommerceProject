@@ -1,8 +1,11 @@
 package Category;
 
-import java.util.UUID;
+import lombok.Getter;
 
-public class Category {
+import java.time.LocalDate;
+import java.util.UUID;
+@Getter
+public abstract class Category {
 
     private UUID id;
     private  String name;
@@ -11,4 +14,10 @@ public class Category {
         this.id = id;
         this.name = name;
     }
+
+    public abstract LocalDate findDeliveryDueDate();
+
+    public  String generateCategoryCode(){
+        return id.toString().substring(0,8).concat("-").concat(name.substring(0,2));
+    };
 }
