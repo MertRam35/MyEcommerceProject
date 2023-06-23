@@ -1,6 +1,6 @@
-package Category;
+package category;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 public class SkinCare extends Category{
@@ -9,8 +9,9 @@ public class SkinCare extends Category{
     }
 
     @Override
-    public LocalDate findDeliveryDueDate() {
-        return null;
+    public LocalDateTime findDeliveryDueDate() {
+
+        return LocalDateTime.now();
     }
 
 
