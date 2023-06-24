@@ -1,10 +1,15 @@
 package discount;
 
-import java.util.UUID;
+import lombok.Getter;
 
+import java.util.UUID;
+@Getter
 public class RateBasedDiscount extends Discount{
-    public RateBasedDiscount(UUID id, String name, Double thresholdAmount) {
+    private Double rateAmount;
+
+    public RateBasedDiscount(UUID id, String name, Double thresholdAmount, Double rateAmount) {
         super(id, name, thresholdAmount);
+        this.rateAmount = rateAmount;
     }
 
     @Override
