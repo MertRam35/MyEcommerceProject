@@ -2,6 +2,7 @@ import category.Category;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Getter
@@ -24,6 +25,15 @@ public class Product {
             }
         }
        throw new Exception("Category not found, "+ getName());
+    }
+
+    public LocalDateTime getDeliveryDueDate() throws Exception {
+        for (Category category : StaticConstants.CATEGORY_LIST) {
+            if (getCategoryId().toString().equals(category.getId().toString())){
+                return category.findDeliveryDueDate();
+            }
+        }
+        throw new Exception("Category cuold no find");
     }
 
 }
