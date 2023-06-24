@@ -1,10 +1,12 @@
 import lombok.Getter;
+import lombok.ToString;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
 @Getter
+@ToString
 public class Customer {
     private UUID id;
     private String userName;

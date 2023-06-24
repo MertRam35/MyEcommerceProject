@@ -1,8 +1,9 @@
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 import javax.management.ConstructorParameters;
-
+@ToString
 public class Address {
 
     private String streetNumber;
