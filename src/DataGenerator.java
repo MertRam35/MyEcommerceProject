@@ -1,3 +1,6 @@
+import balance.Balance;
+import balance.CustomerBalance;
+import balance.GiftCardBalance;
 import category.Category;
 import category.Electronic;
 import category.Furniture;
@@ -53,7 +56,11 @@ public class DataGenerator {
     }
     public static void createBalance(){
 
+        Balance customerBalance = new CustomerBalance(StaticConstants.CUSTOMER_LIST.get(0).getId(),450.0);
+        Balance giftCardBalance = new GiftCardBalance(StaticConstants.CUSTOMER_LIST.get(1).getId(),750.0);
 
+        StaticConstants.BALANCE_LIST.add(customerBalance);
+        StaticConstants.BALANCE_LIST.add(giftCardBalance);
 
 
     }

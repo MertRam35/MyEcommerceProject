@@ -2,8 +2,14 @@ package balance;
 
 import lombok.experimental.SuperBuilder;
 
-@SuperBuilder
-public class GiftBalance extends Balance {
+import java.util.UUID;
+
+
+public class GiftCardBalance extends Balance {
+    public GiftCardBalance(UUID customerId, Double balance) {
+        super(customerId, balance);
+    }
+
     @Override
     public Double addBalance(Double additionalBalance) {
 

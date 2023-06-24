@@ -1,16 +1,20 @@
 package balance;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
 import lombok.experimental.SuperBuilder;
 
 import javax.management.ConstructorParameters;
 import java.beans.ConstructorProperties;
 import java.util.UUID;
+@EqualsAndHashCode(callSuper = true)
 
-@SuperBuilder
+
 public class CustomerBalance extends Balance{
+
+
+    public CustomerBalance(UUID customerId, Double balance) {
+        super(customerId, balance);
+    }
 
     @Override
     public Double addBalance(Double additionalBalance) {
